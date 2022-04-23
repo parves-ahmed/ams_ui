@@ -1,0 +1,10 @@
+.list-group{
+  display: block;
+}
+.list-group-item,.list-group-item:hover {
+  text-decoration: none;
+  border-radius: unset;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+}
