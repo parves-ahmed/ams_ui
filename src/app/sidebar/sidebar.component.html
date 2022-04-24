@@ -1,144 +1,75 @@
-<!-- <div class="container-fluid">
-  <div class="list-group">
-    <a routerLink="/stage" class="list-group-item bg-info">Stages</a>
-    <a routerLink="/stage-actor" class="list-group-item bg-info">Stage Actor</a>
-    <a routerLink="/user" class="list-group-item bg-info">User</a>
-    <a routerLink="/application" class="list-group-item bg-info">Application</a>
-    <a class="list-group-item bg-danger" (click)="logout()">Logout</a>
+<!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+  <div class="sidebar-heading">
+    <div style="text-align: center;"><span><img
+          src="https://img.icons8.com/clouds/100/000000/coronavirus.png" /></span></div>
+    <div style="text-align: center;">COVID 19-VPRDD</div>
   </div>
-</div> -->
-<div class="d-flex" id="wrapper">
-  <!-- Sidebar -->
-  <div class="bg-light border-right" id="sidebar-wrapper">
-    <div class="sidebar-heading">
-      <div style="text-align: center;"><span><img
-            src="https://img.icons8.com/clouds/100/000000/coronavirus.png" /></span></div>
-      <div style="text-align: center;">COVID 19-VPRDD</div>
-    </div>
-    <div class="list-group list-group-flush">
-      <a href="../dashboard.html" class="list-group-item">
-        <span><i class="fa fa-columns"></i></span> Dashboard
-      </a>
-      <a href="../VPI/VPI_Entry.html" class="list-group-item">
-        <span><i class="fa fa-edit"></i></span> VPI Entry
-      </a>
-      <a class="list-group-item" data-toggle="collapse" href="#public" role="button" aria-expanded="false"
-        aria-controls="collapseExample">
-        <span><i class="fa fa-desktop"></i></span> Public Portal
-      </a>
-      <div class="collapse" id="public">
-        <div class="card card-body bg-cr">
-          <a href="../Public_portal/public_Portal_Form.html" class="list-group-item">
-            User Application
-          </a>
+  <div class="list-group list-group-flush">
+    <a href="../dashboard.html" class="list-group-item">
+      <span><i class="fa fa-columns"></i></span> Dashboard
+    </a>
+    <a href="../VPI/VPI_Entry.html" class="list-group-item">
+      <span><i class="fa fa-edit"></i></span> VPI Entry
+    </a>
+    <a class="list-group-item" data-toggle="collapse" href="#public" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      <span><i class="fa fa-desktop"></i></span> Public Portal
+    </a>
+    <div class="collapse" id="public">
+      <div class="card card-body bg-cr">
+        <a href="../Public_portal/public_Portal_Form.html" class="list-group-item">
+          User Application
+        </a>
 
-          <a href="../Public_portal/B_Verify_List.html" class="list-group-item">
-            Verify Application
-          </a>
-        </div>
+        <a href="../Public_portal/B_Verify_List.html" class="list-group-item">
+          Verify Application
+        </a>
       </div>
-      <a class="list-group-item" data-toggle="collapse" href="#relief" role="button" aria-expanded="false"
-        aria-controls="collapseExample">
-        <span><i class="fa fa-ambulance"></i></span> Relief Management
-      </a>
-      <div class="collapse" id="relief">
-        <div class="card card-body">
-          <a href="../Relief/Relief_collection.html" class="list-group-item">
-            Relief Collection
-          </a>
-          <a href="../Relief/Relief_dispatch.html" class="list-group-item">
-            Relief Dispatch
-          </a>
-          <a href="../Relief/Relief_distribution.html" class="list-group-item">
-            Relief Distribution
-          </a>
-          <a href="../Relief/Relief_receive_dist.html" class="list-group-item">
-            Relief Monitoring
-          </a>
-        </div>
+    </div>
+    <a class="list-group-item" data-toggle="collapse" href="#relief" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      <span><i class="fa fa-ambulance"></i></span> Relief Management
+    </a>
+    <div class="collapse" id="relief">
+      <div class="card card-body">
+        <a href="../Relief/Relief_collection.html" class="list-group-item">
+          Relief Collection
+        </a>
+        <a href="../Relief/Relief_dispatch.html" class="list-group-item">
+          Relief Dispatch
+        </a>
+        <a href="../Relief/Relief_distribution.html" class="list-group-item">
+          Relief Distribution
+        </a>
+        <a href="../Relief/Relief_receive_dist.html" class="list-group-item">
+          Relief Monitoring
+        </a>
       </div>
-      <a class="list-group-item" data-toggle="collapse" href="#donar" role="button" aria-expanded="false"
-        aria-controls="collapseExample">
-        <span><i class="fa fa-gg"></i></span> Donar Portal
-      </a>
-      <div class="collapse" id="donar">
-        <div class="card card-body">
-          <a href="../Donar/VPI_VulnerablePeopleSearch.html" class="list-group-item">Search VP</a>
-        </div>
+    </div>
+    <a class="list-group-item" data-toggle="collapse" href="#donar" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      <span><i class="fa fa-gg"></i></span> Donar Portal
+    </a>
+    <div class="collapse" id="donar">
+      <div class="card card-body">
+        <a href="../Donar/VPI_VulnerablePeopleSearch.html" class="list-group-item">Search VP</a>
       </div>
-      <a href="../Complaint/complaint_List.html" class="list-group-item">
-        <span><i class="fa fa-headphones"></i></span> User Complaint
-      </a>
-      <a class="list-group-item" data-toggle="collapse" href="#report" role="button" aria-expanded="false"
-        aria-controls="collapseExample">
-        <span><i class="fa fa-book"></i></span> Mis Report
-      </a>
-      <div class="collapse" id="report">
-        <div class="card card-body">
-          <a href="../Mis_report/Density_report.html" class="list-group-item">
-            Density Report
-          </a>
-        </div>
+    </div>
+    <a href="../Complaint/complaint_List.html" class="list-group-item">
+      <span><i class="fa fa-headphones"></i></span> User Complaint
+    </a>
+    <a class="list-group-item" data-toggle="collapse" href="#report" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      <span><i class="fa fa-book"></i></span> Mis Report
+    </a>
+    <div class="collapse" id="report">
+      <div class="card card-body">
+        <a href="../Mis_report/Density_report.html" class="list-group-item">
+          Density Report
+        </a>
       </div>
     </div>
   </div>
-  <!-- /#sidebar-wrapper -->
-
-  <!-- Page Content -->
-  <div id="page-content-wrapper">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-      <button class="btn rounded-circle" id="menu-toggle" style="background-color: #ffffff"><span><i
-            class="fa fa-arrow-left"></i></span></button>
-      <a class="nav-link" href="#" style="color: #000000;"><span><i class="fa fa-home"></i></span> Home</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link user" href="#" style="border-right: 1px solid;"><span
-                class="border rounded-circle user_icon"><i class="fa fa-user"></i></span> Ward Councillor Ward No :
-              12</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Log Out</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container-fluid">
-      <h3 style="text-align: center; margin-top: 40px; color: #29b99e">Complaint List</h3>
-      <table class="table" style="margin-top: 20px;">
-        <thead class="thead-dark" style="text-align: center;">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Father’s Name</th>
-            <th scope="col">Mother’s Name</th>
-            <th scope="col">NID</th>
-            <th scope="col">Mobile number</th>
-            <th scope="col">Address</th>
-            <th scope="col">Complaint status</th>
-            <th scope="col">Options</th>
-          </tr>
-        </thead>
-        <tbody style="text-align: center;">
-          <tr>
-            <th scope="row">1</th>
-            <td>আনো বেগম</td>
-            <td>জলিল মিয়া</td>
-            <td>জাহানারা বেগম</td>
-            <td>1917554074</td>
-            <td>01711187986</td>
-            <td>৫৫/এ, নয়াপাড়া</td>
-            <td id="st">Open</td>
-            <td id="editBtn"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                Edit
-              </button></td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-
-  
+</div>
+<!-- /#sidebar-wrapper -->
