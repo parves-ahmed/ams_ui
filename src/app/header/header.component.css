@@ -4,3 +4,8 @@
     background: linear-gradient(to right, #29b99e, #3beeaa);
     background-repeat: no-repeat;
   }
+
+  .navbar .user_icon{
+    background-color: #ffffff;
+    padding: 8px 13px 8px;
+  }

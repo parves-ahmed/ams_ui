@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <div class="card m-2">
+        <div class="card-header">
+            <h4 style="color: #29b99e">Add User</h4>
+        </div>
+        <div class="card-body">
+            <!-- <form [formGroup] = "addUserForm" id="form" (ngSubmit)="create()"></form> -->
+            <form [formGroup] = "addUserForm" id="form">
+                <div class="form-row" >
+                    <div class="form-group row col-md-6">
+                        <label for="username" class="col-sm-4 col-form-label">User Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="username" placeholder="User Name"  [formControlName]="'username'" name="username">
+                        </div>
+                    </div>
+                    <div class="form-group row col-md-6">
+                        <label for="departmentName" class="col-sm-4 col-form-label">Department Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="departmentName" placeholder="Department Name">
+                        </div>
+                    </div>
+                    <div class="form-group row col-md-6">
+                        <label for="designation" class="col-sm-4 col-form-label">Designation</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="designation" placeholder="Designation">
+                        </div>
+                    </div>
+                    <div class="form-group row col-md-6">
+                        <label for="email" class="col-sm-4 col-form-label">Email Address</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="email" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="form-group row col-md-6">
+                        <label for="phoneNo" class="col-sm-4 col-form-label">Phone No</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="phoneNo" placeholder="Phone No">
+                        </div>
+                    </div>
+                    <div class="form-group row col-md-6">
+                        <label for="userId" class="col-sm-4 col-form-label">User ID</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="userId" placeholder="User ID">
+                        </div>
+                    </div>
+                    <div class="form-group row col-md-6">
+                        <label for="password" class="col-sm-4 col-form-label">Password</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="password" placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row" >
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btnSave" id="btnSave">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>   
+  </div>

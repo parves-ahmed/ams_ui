@@ -1,124 +1,31 @@
-<div class="col-3 sidebar">
-  <app-sidebar></app-sidebar>
-</div>
-<div class="col-9 body">
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <div class="panel-title">
-        <div class="d-flex justify-content-between mb-3">
-          <div class="p-2"><span class="btn"><i class="fa fa-th-list" aria-hidden="true"></i> Application List</span>
-          </div>
-          <div class="p-2"><a class="btn bg-info create" (click)="open(content)"> Create </a></div>
-        </div>
-      </div>
-      <div class="panel-body">
-        <div class="container">
-          <table class="table table-bordered table-striped table-hover">
-            <thead>
-            <tr>
-              <th>SL</th>
-              <th>Applicant</th>
-              <th>Designation</th>
-              <th>Company</th>
-              <th>Address</th>
-              <th>Requested Fund</th>
-              <th>Approved Fund</th>
-              <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let application of applications; let i = index">
-              <td>{{i + 1}}</td>
-              <td>{{application.applicantDetails}}</td>
-              <td>{{application.designation}}</td>
-              <td>{{application.officeName}}</td>
-              <td>{{application.officeAddress}}</td>
-              <td>{{application.reqfund}}</td>
-              <td>{{application.appfund}}</td>
-              <td class="text-center">
-                <a (click)="action(application.id, i)">
-                  <i class="fa fa-exclamation-circle"></i>
-                </a>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--Create / Edit Stage-->
-  <ng-template #content let-modal>
-    <div class="modal-header">
-      <h5 class="modal-title">Create Stage</h5>
-      <button type="button" class="close" aria-label="Close" (click)="onClose(modal)">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form [formGroup]="applicationForm" id="form" (ngSubmit)="create()">
-        <div class="form-group row">
-          <label for="officeName" class="col-md-4 col-form-label text-md-right">Company</label>
-          <div class="col-md-6">
-            <input type="text" id="officeName" class="form-control" [formControlName]="'officeName'" name="officeName"
-                   required autofocus>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="officeAddress" class="col-md-4 col-form-label text-md-right">Address</label>
-          <div class="col-md-6">
-            <input type="text" id="officeAddress" class="form-control" [formControlName]="'officeAddress'" name="officeAddress"
-                   required autofocus>
-<!--            <span *ngIf="!applicationForm.get('officeAddress').valid && applicationForm.get('officeAddress').touched">
-                  Please provide a valid stage Actor name
-                </span>-->
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="designation" class="col-md-4 col-form-label text-md-right">Designation</label>
-          <div class="col-md-6">
-            <input type="text" id="designation" class="form-control" [formControlName]="'designation'"
-                   name="designation"/>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="reqfund" class="col-md-4 col-form-label text-md-right">Request Fund</label>
-          <div class="col-md-6">
-            <input type="text" id="reqfund" class="form-control" [formControlName]="'reqfund'"
-                   name="reqfund"/>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="yearlyIncome" class="col-md-4 col-form-label text-md-right">Yearly Income</label>
-          <div class="col-md-6">
-            <input type="text" id="yearlyIncome" class="form-control" [formControlName]="'yearlyIncome'"
-                   name="yearlyIncome"/>
-          </div>
-        </div>
-       <!-- <div class="form-group row">
-          <label for="stage" class="col-md-4 col-form-label text-md-right">Stage</label>
-          <div class="col-md-6">
-            <select id="stage" class="form-control" [formControlName]="'stage'">
-              <option value="" selected disabled >Select Stage</option>
-              <option *ngFor="let stage of a" [ngValue]="stage">{{stage.name}}</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="employee" class="col-md-4 col-form-label text-md-right">Employee</label>
-          <div class="col-md-6">
-            <select id="employee" class="form-control" [formControlName]="'employee'">
-              <option value="" selected disabled >Select Employee</option>
-              <option *ngFor="let employee of employees" [ngValue]="employee">{{employee.fullName}}</option>
-            </select>
-          </div>
-        </div>-->
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="submit" class="btn btn-default btn-outline-success save" form="form">Save</button>
-      <button type="button" class="btn btn-outline-danger" (click)="onClose(modal)">Close</button>
-    </div>
-  </ng-template>
-
-</div>
+<h3 style="text-align: center; margin-top: 40px; color: #29b99e">Complaint List</h3>
+<table class="table" style="margin-top: 20px;">
+  <thead class="thead-dark" style="text-align: center;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Father’s Name</th>
+      <th scope="col">Mother’s Name</th>
+      <th scope="col">NID</th>
+      <th scope="col">Mobile number</th>
+      <th scope="col">Address</th>
+      <th scope="col">Complaint status</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: center;">
+    <tr>
+      <th scope="row">1</th>
+      <td>আনো বেগম</td>
+      <td>জলিল মিয়া</td>
+      <td>জাহানারা বেগম</td>
+      <td>1917554074</td>
+      <td>01711187986</td>
+      <td>৫৫/এ, নয়াপাড়া</td>
+      <td id="st">Open</td>
+      <td id="editBtn"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+          Edit
+        </button></td>
+    </tr>
+  </tbody>
+</table>

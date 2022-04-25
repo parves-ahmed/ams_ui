@@ -23,6 +23,7 @@ import {ApplicationComponent} from './application/application.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {UserComponent} from './user/user.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {UserComponent} from './user/user.component';
     ApplicationComponent,
     SidebarComponent,
     UserComponent,
+    AddUserComponent,
   ],
   imports: [
     BrowserModule,

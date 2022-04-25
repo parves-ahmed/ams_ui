@@ -6,67 +6,34 @@
     <div style="text-align: center;">COVID 19-VPRDD</div>
   </div>
   <div class="list-group list-group-flush">
-    <a href="../dashboard.html" class="list-group-item">
-      <span><i class="fa fa-columns"></i></span> Dashboard
-    </a>
-    <a href="../VPI/VPI_Entry.html" class="list-group-item">
-      <span><i class="fa fa-edit"></i></span> VPI Entry
-    </a>
     <a class="list-group-item" data-toggle="collapse" href="#public" role="button" aria-expanded="false"
       aria-controls="collapseExample">
-      <span><i class="fa fa-desktop"></i></span> Public Portal
+      <span><i class="fa fa-edit"></i></span> MANAGE
     </a>
     <div class="collapse" id="public">
       <div class="card card-body bg-cr">
-        <a href="../Public_portal/public_Portal_Form.html" class="list-group-item">
-          User Application
+        <a routerLink="/adduser" routerLinkActive="active" class="list-group-item">
+          Add User
         </a>
-
         <a href="../Public_portal/B_Verify_List.html" class="list-group-item">
-          Verify Application
+          Allottee Entry
         </a>
       </div>
     </div>
     <a class="list-group-item" data-toggle="collapse" href="#relief" role="button" aria-expanded="false"
       aria-controls="collapseExample">
-      <span><i class="fa fa-ambulance"></i></span> Relief Management
+      <span><i class="fa fa-book"></i></span> REPORTS
     </a>
     <div class="collapse" id="relief">
       <div class="card card-body">
-        <a href="../Relief/Relief_collection.html" class="list-group-item">
-          Relief Collection
+        <a routerLink="/application" routerLinkActive="active" class="list-group-item">
+          Allottee List
         </a>
-        <a href="../Relief/Relief_dispatch.html" class="list-group-item">
-          Relief Dispatch
+        <a routerLink="/user" routerLinkActive="active" class="list-group-item">
+          User List
         </a>
         <a href="../Relief/Relief_distribution.html" class="list-group-item">
-          Relief Distribution
-        </a>
-        <a href="../Relief/Relief_receive_dist.html" class="list-group-item">
-          Relief Monitoring
-        </a>
-      </div>
-    </div>
-    <a class="list-group-item" data-toggle="collapse" href="#donar" role="button" aria-expanded="false"
-      aria-controls="collapseExample">
-      <span><i class="fa fa-gg"></i></span> Donar Portal
-    </a>
-    <div class="collapse" id="donar">
-      <div class="card card-body">
-        <a href="../Donar/VPI_VulnerablePeopleSearch.html" class="list-group-item">Search VP</a>
-      </div>
-    </div>
-    <a href="../Complaint/complaint_List.html" class="list-group-item">
-      <span><i class="fa fa-headphones"></i></span> User Complaint
-    </a>
-    <a class="list-group-item" data-toggle="collapse" href="#report" role="button" aria-expanded="false"
-      aria-controls="collapseExample">
-      <span><i class="fa fa-book"></i></span> Mis Report
-    </a>
-    <div class="collapse" id="report">
-      <div class="card card-body">
-        <a href="../Mis_report/Density_report.html" class="list-group-item">
-          Density Report
+          Attendence Report
         </a>
       </div>
     </div>
