@@ -16,17 +16,12 @@ export class AddUserComponent implements OnInit {
   ngOnInit(): void {
     this.addUserForm = new FormGroup({
       username: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      departmentName: new FormControl('',Validators.required),
+      designation: new FormControl('',Validators.required),
       email: new FormControl('', Validators.required),
-      // role: new FormControl('', Validators.required),
-      // // user id for role wise details
-      // fullName: new FormControl('', Validators.required),
-      // address: new FormControl(''),
-      // mobile: new FormControl('', Validators.required),
-      // // Employee properties below 3
-      // designation: new FormControl('', Validators.required),
-      // picture: new FormControl(''),
-      // signature: new FormControl(''),
+      phoneNo: new FormControl('',Validators.required),
+      userId: new FormControl(''),
+      password: new FormControl('', Validators.required)
     });
   }
 
