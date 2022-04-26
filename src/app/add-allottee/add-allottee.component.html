@@ -1,13 +1,13 @@
 <div class="container-fluid">
     <div class="card m-2">
         <div class="card-header">
-            <h4 style="color: #29b99e">Add Allottee</h4>
+            <h4 style="color: #677a87">Add Allottee</h4>
         </div>
         <div class="card-body">
             <form>
                 <div id="div_1">
                     <div class="row">
-                        <div class="col-sm-1 text-center">
+                        <div class="col-sm-2 text-center">
                             <label class="control-label"><span id="for_attendace">Attendance Date</span> </label>
                         </div>
                 
@@ -16,7 +16,7 @@
                             <input class="form-control" type="text" id="attendance_date" name="attendance_date" value="">
                 
                         </div>
-                        <div class="col-sm-1 text-center">
+                        <div class="col-sm-2 text-center">
                             <label class="control-label"><span id="for_attendace">Attendance Time</span> </label>
                         </div>
                 
@@ -24,9 +24,10 @@
                 
                             <input class="form-control" type="text" id="attendance_time" name="attendance_time" value="">
                 
-                        </div>
-                
-                        <div class="col-sm-1 text-center">
+                        </div>                     
+                    </div><br>
+                    <div class="row">
+                        <div class="col-sm-2 text-center">
                             <label class="control-label"><span id="for_attendace">Location</span> </label>
                         </div>
                 
@@ -35,10 +36,11 @@
                             <input class="form-control" type="text" id="location" name="location" value="">
                 
                         </div>
-                
+
+                        <div class="col-sm-5 text-center"></div>
                         <div class="col-sm-3 text-center">
                 
-                            <img src="" height="100" width="100" id="photo" alt="">
+                            <img src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v3.png" height="100" width="100" id="photo" alt="">
                             <input class="form-control" type="file" id="location" name="location" placeholder="upload " value="" onchange="document.getElementById('photo').src = window.URL.createObjectURL(this.files[0])">
                 
                         </div>
@@ -69,7 +71,9 @@
                             <input class="form-control" type="text" id="sector" name="sector" value="">
                 
                         </div>
-                
+                                       
+                    </div><br>
+                    <div class="row">
                         <div class="col-sm-2 text-center">
                             <label class="control-label"><span id="for_attendace">Road No</span> </label>
                         </div>
@@ -79,10 +83,8 @@
                             <input class="form-control" type="text" id="road_no" name="road_no" value="">
                 
                         </div>
-                    </div><br>
-                    <div class="row">
                         <div class="col-sm-2 text-center">
-                            <label class="control-label"><span id="for_attendace">Plot Not</span> </label>
+                            <label class="control-label"><span id="for_attendace">Plot No</span> </label>
                         </div>
                 
                         <div class="col-sm-2 text-center">
@@ -109,96 +111,56 @@
                 <!--  -->
                 <div><label><b>All the documents examined matched with the copy of the document : </b></label> </div>
                 <div id="div_flute_type">
-                    <div class="row">              
-                        <div class="col-sm-4 text-center">              
-                            <label class="control-label checkbox-inline" for="for_document">               
-                                <span>i. Bank Receipt of Security </span>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>i. Bank Receipt of Security </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>               
-                        </div>
-                        <div class="col-sm-4 text-center">               
-                            <label class="control-label checkbox-inline" for="flute_type">
-                
-                                <span>v. Mutation Letter </span>
+                            </td>
+                            <td>v. Mutation Letter </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>              
-                        </div>               
-                        <div class="col-sm-4 text-center">               
-                            <label class="control-label checkbox-inline" for="flute_type">
-                
-                                <span>viii. Lease Deed (Certified Copy) </span>
+                            </td>
+                            <td>viii. Lease Deed (Certified Copy) </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>
-                
-                        </div>              
-                    </div><!-- End of <div class="form-group form-group-sm" flute_type-->
-                    <div class="row">
-                
-                        <div class="col-sm-4 text-center">
-                
-                            <label class="control-label checkbox-inline" for="for_document">
-                
-                                <span>ii. Temporary Allotment </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ii. Temporary Allotment </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>
-                
-                        </div>
-                                
-                        <div class="col-sm-4 text-center">
-                
-                            <label class="control-label checkbox-inline" for="flute_type">
-                
-                                <span>vi.Letter of Permission /<br> Document of Procurator </span>
+                            </td>
+                            <td>vi.Letter of Permission / Document of Procurator  </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>
-                
-                        </div>
-                
-                        <div class="col-sm-4 text-center">
-                
-                            <label class="control-label checkbox-inline" for="flute_type">
-                
-                                <span>xi. Bank Receipt for <br> Payment of Installments  </span>
+                            </td>
+                            <td>xi. Bank Receipt for Payment of Installments   </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>
-                
-                        </div>               
-                
-                    </div><!-- End of <div class="form-group form-group-sm" flute_type-->
-                
-                    <div class="row">
-                
-                        <div class="col-sm-4 text-center">
-                
-                            <label class="control-label checkbox-inline" for="for_document">
-                
-                                <span>iii. Final Allotment </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>iii. Final Allotment  </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>
-                
-                        </div>
-                               
-                        <div class="col-sm-4 text-center">
-                
-                            <label class="control-label checkbox-inline" for="flute_type">
-                
-                                <span>vii. Inheritance Allocation/ <br> Mutation Letter </span>
+                            </td>
+                            <td>vii. Inheritance Allocation/ Mutation Letter  </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>
-                
-                        </div>
-                
-                        <div class="col-sm-4 text-center">
-                
-                            <label class="control-label checkbox-inline" for="flute_type">
-                
-                                <span>x. Disposal Permit Letter / Deed </span>
+                            </td>
+                            <td>x. Disposal Permit Letter / Deed    </td>
+                            <td>
                                 <input type="checkbox" id="documen" name="documen[]" value="A Flute">
-                            </label>
-                
-                        </div>               
-                
-                    </div><!-- End of <div class="form-group form-group-sm" flute_type-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>iv. Letter of Possession   </td>
+                            <td>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </td>
+                        </tr>
+                    </table>
                 
                 </div> <!--  End of <div id="div_flute_type" style="display: none">  -->
                 
@@ -318,7 +280,7 @@
                 <div style="text-align: center;"><label><b><u>'Declaration'</u></b></label> </div>
                 <div class="row">
                 
-                    <div class="col-sm-1 text-right">
+                    <div class="col-sm-2 text-center">
                         <label class="control-label"><span id="for_attendace"> Name</span> </label>
                     </div>
                 
@@ -328,11 +290,11 @@
                 
                     </div>                              
                 
-                    <div class="col-sm-2 text-right">
+                    <div class="col-sm-2 text-center">
                         <label class="control-label"><span id="for_attendace"> Phone No</span> </label>
                     </div>
                 
-                    <div class="col-sm-4 text-right">
+                    <div class="col-sm-4 text-center">
                 
                         <input class="form-control input-sm" type="text" id="area_name" name="area_name" value="">
                 

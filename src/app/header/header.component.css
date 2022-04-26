@@ -1,7 +1,8 @@
 .navbar {
     background: #29b99e;
-    background: -webkit-linear-gradient(to right, #29b99e, #3beeaa);
-    background: linear-gradient(to right, #29b99e, #3beeaa);
+    height: 80px;
+    background: -webkit-linear-gradient(to right, #50B5E0, #50B5E0);
+    background: linear-gradient(to right, #50B5E0, #50B5E0);
     background-repeat: no-repeat;
   }
 

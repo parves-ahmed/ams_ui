@@ -2,36 +2,46 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
   <div class="sidebar-heading">
     <div style="text-align: center;"><span><img
-          src="https://img.icons8.com/clouds/100/000000/coronavirus.png" /></span></div>
-    <div style="text-align: center;">COVID 19-VPRDD</div>
+          src="../../assets/images/rajuk-logo.com.png" height="50px" width="50px"/> RAJUK</span></div>
+    <!-- <div style="text-align: center;">RAJUK</div> -->
   </div>
   <div class="list-group list-group-flush">
-    <a class="list-group-item" data-toggle="collapse" href="#public" role="button" aria-expanded="false"
+    <a class="list-group-item" data-toggle="collapse" href="#user" role="button" aria-expanded="false"
       aria-controls="collapseExample">
-      <span><i class="fa fa-edit"></i></span> MANAGE
+      <span><i class="fa fa-edit"></i></span> USER
     </a>
-    <div class="collapse" id="public">
-      <div class="card card-body bg-cr">
+    <div class="collapse" id="user">
+      <div class="card card-body">
         <a routerLink="/adduser" routerLinkActive="active" class="list-group-item">
           Add User
-        </a>
-        <a routerLink="/addallottee" routerLinkActive="active" class="list-group-item">
-          Allottee Entry
-        </a>
-      </div>
-    </div>
-    <a class="list-group-item" data-toggle="collapse" href="#relief" role="button" aria-expanded="false"
-      aria-controls="collapseExample">
-      <span><i class="fa fa-book"></i></span> REPORTS
-    </a>
-    <div class="collapse" id="relief">
-      <div class="card card-body">
-        <a routerLink="/application" routerLinkActive="active" class="list-group-item">
-          Allottee List
         </a>
         <a routerLink="/user" routerLinkActive="active" class="list-group-item">
           User List
         </a>
+      </div>
+    </div>
+
+    <a class="list-group-item" data-toggle="collapse" href="#allottee" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      <span><i class="fa fa-edit"></i></span> ALLOTTEE
+    </a>
+    <div class="collapse" id="allottee">
+      <div class="card card-body">
+        <a routerLink="/addallottee" routerLinkActive="active" class="list-group-item">
+          Allottee Entry
+        </a>
+        <a routerLink="/application" routerLinkActive="active" class="list-group-item">
+          Allottee List
+        </a>
+      </div>
+    </div>
+
+    <a class="list-group-item" data-toggle="collapse" href="#report" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      <span><i class="fa fa-book"></i></span> REPORTS
+    </a>
+    <div class="collapse" id="report">
+      <div class="card card-body">             
         <a href="../Relief/Relief_distribution.html" class="list-group-item">
           Attendence Report
         </a>
