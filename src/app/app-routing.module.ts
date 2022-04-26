@@ -7,6 +7,7 @@ import {HomeComponent} from './home/home.component';
 import {AuthGuard} from './auth/auth.guard';
 import {UserComponent} from './user/user.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { AddAllotteeComponent } from './add-allottee/add-allottee.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, canActivate: [AuthGuard]},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'user', component: UserComponent},
   {path: 'adduser', component: AddUserComponent},
+  {path: 'addallottee', component: AddAllotteeComponent},
   {path: 'application', component: ApplicationComponent}
   // {path: 'user', component: UserComponent, canActivate: [AuthGuard]},
   // {path: 'application', component: ApplicationComponent, canActivate: [AuthGuard]}

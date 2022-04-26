@@ -24,6 +24,7 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {UserComponent} from './user/user.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { AddAllotteeComponent } from './add-allottee/add-allottee.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddUserComponent } from './add-user/add-user.component';
     SidebarComponent,
     UserComponent,
     AddUserComponent,
+    AddAllotteeComponent,
   ],
   imports: [
     BrowserModule,

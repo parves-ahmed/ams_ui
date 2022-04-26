@@ -1,0 +1,49 @@
+#form{
+    font-size: 1px;
+}
+#btnSearch {
+	border-radius: 20px;
+	border: 1px solid #29b99e;
+	background-color: #29b99e;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#btnSearch:active {
+	transform: scale(0.95);
+}
+
+#btnSearch:focus {
+	outline: none;
+}
+
+#btnSearch.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+#btnSave {
+	border-radius: 20px;
+	border: 1px solid #29b99e;
+	background-color: #29b99e;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#btnSave:active {
+	transform: scale(0.95);
+}
+
+#btnSave:focus {
+	outline: none;
+}

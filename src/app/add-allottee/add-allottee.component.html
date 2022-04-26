@@ -1,0 +1,352 @@
+<div class="container-fluid">
+    <div class="card m-2">
+        <div class="card-header">
+            <h4 style="color: #29b99e">Add Allottee</h4>
+        </div>
+        <div class="card-body">
+            <form>
+                <div id="div_1">
+                    <div class="row">
+                        <div class="col-sm-1 text-center">
+                            <label class="control-label"><span id="for_attendace">Attendance Date</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <input class="form-control" type="text" id="attendance_date" name="attendance_date" value="">
+                
+                        </div>
+                        <div class="col-sm-1 text-center">
+                            <label class="control-label"><span id="for_attendace">Attendance Time</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <input class="form-control" type="text" id="attendance_time" name="attendance_time" value="">
+                
+                        </div>
+                
+                        <div class="col-sm-1 text-center">
+                            <label class="control-label"><span id="for_attendace">Location</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <input class="form-control" type="text" id="location" name="location" value="">
+                
+                        </div>
+                
+                        <div class="col-sm-3 text-center">
+                
+                            <img src="" height="100" width="100" id="photo" alt="">
+                            <input class="form-control" type="file" id="location" name="location" placeholder="upload " value="" onchange="document.getElementById('photo').src = window.URL.createObjectURL(this.files[0])">
+                
+                        </div>
+                    </div><!-- End of <div class="form-group form-group-sm" measurement_of_carton-->
+                
+                </div> <!--  End of <div id="div_measurement_of_carton" style="display: none">  -->
+                
+                <!-- class="form-control" -->
+                <div><label><b>Land Schedule (Evidance will be taken about that land) : </b></label> </div>
+                <div id="div_1">
+                    <div class="row">
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_attendace">Area Name</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <input class="form-control" type="text" id="area_name" name="area_name" value="">
+                
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_sector">Sector</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <input class="form-control" type="text" id="sector" name="sector" value="">
+                
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_attendace">Road No</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <input class="form-control" type="text" id="road_no" name="road_no" value="">
+                
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_attendace">Plot Not</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <input class="form-control" type="text" id="area_name" name="area_name" value="">
+                
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_sector">Volumn / Size</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <input class="form-control" type="text" id="sector" name="sector" value="">
+                
+                        </div>
+                    </div>
+                
+                </div>
+                <!--  End of <div id="div_measurement_of_carton" style="display: none">  -->
+                
+                <hr>
+                <!--  -->
+                <div><label><b>All the documents examined matched with the copy of the document : </b></label> </div>
+                <div id="div_flute_type">
+                    <div class="row">              
+                        <div class="col-sm-4 text-center">              
+                            <label class="control-label checkbox-inline" for="for_document">               
+                                <span>i. Bank Receipt of Security </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>               
+                        </div>
+                        <div class="col-sm-4 text-center">               
+                            <label class="control-label checkbox-inline" for="flute_type">
+                
+                                <span>v. Mutation Letter </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>              
+                        </div>               
+                        <div class="col-sm-4 text-center">               
+                            <label class="control-label checkbox-inline" for="flute_type">
+                
+                                <span>viii. Lease Deed (Certified Copy) </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>
+                
+                        </div>              
+                    </div><!-- End of <div class="form-group form-group-sm" flute_type-->
+                    <div class="row">
+                
+                        <div class="col-sm-4 text-center">
+                
+                            <label class="control-label checkbox-inline" for="for_document">
+                
+                                <span>ii. Temporary Allotment </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>
+                
+                        </div>
+                                
+                        <div class="col-sm-4 text-center">
+                
+                            <label class="control-label checkbox-inline" for="flute_type">
+                
+                                <span>vi.Letter of Permission /<br> Document of Procurator </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>
+                
+                        </div>
+                
+                        <div class="col-sm-4 text-center">
+                
+                            <label class="control-label checkbox-inline" for="flute_type">
+                
+                                <span>xi. Bank Receipt for <br> Payment of Installments  </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>
+                
+                        </div>               
+                
+                    </div><!-- End of <div class="form-group form-group-sm" flute_type-->
+                
+                    <div class="row">
+                
+                        <div class="col-sm-4 text-center">
+                
+                            <label class="control-label checkbox-inline" for="for_document">
+                
+                                <span>iii. Final Allotment </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>
+                
+                        </div>
+                               
+                        <div class="col-sm-4 text-center">
+                
+                            <label class="control-label checkbox-inline" for="flute_type">
+                
+                                <span>vii. Inheritance Allocation/ <br> Mutation Letter </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>
+                
+                        </div>
+                
+                        <div class="col-sm-4 text-center">
+                
+                            <label class="control-label checkbox-inline" for="flute_type">
+                
+                                <span>x. Disposal Permit Letter / Deed </span>
+                                <input type="checkbox" id="documen" name="documen[]" value="A Flute">
+                            </label>
+                
+                        </div>               
+                
+                    </div><!-- End of <div class="form-group form-group-sm" flute_type-->
+                
+                </div> <!--  End of <div id="div_flute_type" style="display: none">  -->
+                
+                <hr>
+                               
+                <div><label><b>Signature test of the leaseholder / power of attorney / Hander</b></label> </div>
+                <div id="div_2">
+                               
+                    <div class="row">
+                               
+                        <div class="col-sm-2 text-center">
+                            <!-- space -->
+                        </div>
+                
+                        <div class="col-sm-5 text-center">
+                
+                            <!-- space -->
+                
+                        </div>               
+                
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_attendace">Signature 1</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <!-- <input class="form-control" type="text" id="road_no" name="road_no" value="" > -->
+                            <label class="control-label">_______________________________________ </label>
+                
+                        </div>                              
+                
+                    </div><!-- End of <div class="form-group form-group-sm" measurement_of_carton-->
+                
+                    <br>
+                    <div class="row">
+                
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_attendace">Full Name</span> </label>
+                        </div>
+                
+                        <div class="col-sm-5 text-center">
+                
+                            <input class="form-control" type="text" id="area_name" name="area_name" value="">
+                
+                        </div>                
+                
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_attendace">Signature 2</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <!-- <input class="form-control" type="text" id="road_no" name="road_no" value="" > -->
+                            <label class="control-label">_______________________________________ </label>
+                
+                        </div>                
+                
+                    </div><!-- End of <div class="form-group form-group-sm" measurement_of_carton-->
+                    <br>
+                    <div class="row">
+                
+                        <div class="col-sm-2 text-center">
+                            <!-- space -->
+                        </div>
+                
+                        <div class="col-sm-5 text-center">
+                            <!-- space -->
+                
+                        </div>
+                                
+                        <div class="col-sm-2 text-center">
+                            <label class="control-label"><span id="for_attendace">Signature 3</span> </label>
+                        </div>
+                
+                        <div class="col-sm-2 text-center">
+                
+                            <!-- <input class="form-control" type="text" id="road_no" name="road_no" value="" > -->
+                            <label class="control-label">_______________________________________ </label>
+                
+                        </div>               
+                
+                    </div><!-- End of <div class="form-group form-group-sm" measurement_of_carton-->
+                
+                
+                </div> <!--  End of <div id="div_measurement_of_carton" style="display: none">  -->
+                
+                <hr>
+                
+                <div style="text-align: center;"><label><b>Appeared in front of me and signed. His/her signature was matched with the application form.
+                     I have attested his picture.</b></label> </div><br><br>
+                
+                <div class="row">
+                
+                    <div class="col-sm-2 text-center">
+                        <label class="control-label"><span id="for_attendace">Signature 2</span> </label>
+                    </div>
+                
+                    <div class="col-sm-5">
+                        <label class="control-label">_______________________________________ </label>
+                    </div>               
+                
+                    <div class="col-sm-2 text-center">
+                        <label class="control-label"><span id="for_attendace">Signature 2</span> </label>
+                    </div>
+                
+                    <div class="col-sm-2 text-center">
+                
+                        <!-- <input class="form-control" type="text" id="road_no" name="road_no" value="" > -->
+                        <label class="control-label">_______________________________________ </label>
+                
+                    </div>               
+                                
+                </div><!-- End of <div class="form-group form-group-sm" measurement_of_carton-->
+                
+                <hr>
+                
+                <div style="text-align: center;"><label><b><u>'Declaration'</u></b></label> </div>
+                <div class="row">
+                
+                    <div class="col-sm-1 text-right">
+                        <label class="control-label"><span id="for_attendace"> Name</span> </label>
+                    </div>
+                
+                    <div class="col-sm-4 text-center">
+                
+                        <input class="form-control input-sm" type="text" id="area_name" name="area_name" value="">
+                
+                    </div>                              
+                
+                    <div class="col-sm-2 text-right">
+                        <label class="control-label"><span id="for_attendace"> Phone No</span> </label>
+                    </div>
+                
+                    <div class="col-sm-4 text-right">
+                
+                        <input class="form-control input-sm" type="text" id="area_name" name="area_name" value="">
+                
+                    </div>
+                                
+                </div><!-- End of <div class="form-group form-group-sm" measurement_of_carton-->
+                <hr>
+                <div class="form-group row" >
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btnSave" id="btnSave">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
