@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import {PeriodicReportData} from './mock-periodicReport';
-import {NgbCalendar, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 declare const $:any;
 
@@ -30,17 +29,41 @@ export class PeriodicReportComponent implements OnInit, AfterViewInit {
     //     return false;
     //   }
     // );
-    let table = $(this.dataTable.nativeElement).DataTable();
+    $(this.dataTable.nativeElement).DataTable();
 
-    $('#btnSearch').click(function () {
-       table.draw();
-    });
+    // $('#btnSearch').click(function () {
+    //    table.draw();
+    // });
   }
 
 
   ngOnInit(): void {
   }
 
-
-
+  search(){
+    
+    console.log('find');
+    $.fn.dataTable.ext.search.push(
+      function (settings, data, dataIndex) {
+        let dateFrom = $('#dateFrom').val();
+        dateFrom = new Date(dateFrom);
+        let dateTo = $('#dateTo').val();
+        dateTo = new Date(dateTo);
+        var dateDiff = data[4];
+        dateDiff = new Date(dateDiff);
+        console.log('df'+ dateFrom, 'dt' + dateTo, 'dff' + dateDiff)
+        if ((isNaN(dateFrom) && isNaN(dateTo)) ||
+          (isNaN(dateFrom) && dateDiff <= dateTo) ||
+          (dateFrom <= dateDiff && isNaN(dateTo)) ||
+          (dateFrom <= dateDiff && dateDiff <= dateTo)) {
+          return true;
+        }
+        return false;
+      }
+    )
+    let table = $(this.dataTable.nativeElement).DataTable();
+    table.draw();
+   }  
+   
+  
 }

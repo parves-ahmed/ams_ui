@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <button type="submit" class="btnSave" id="btnSearch" >Search</button>
+                            <button class="btnSearch" id="btnSearch" (click)="search()">Search</button>
                         </div>
                     </div>
                 </form>
@@ -50,7 +50,7 @@
                     <td>{{data.allotteeName}}</td>
                     <td>{{data.location}}</td>
                     <td>{{data.phoneNo}}</td>
-                    <td>{{data.date | date:'dd-MM-yyyy'}}</td>
+                    <td>{{data.date | date:'yyyy-MM-dd'}}</td>
                     <td>{{data.inTime | date:'shortTime'}}</td>
                     <td>{{data.outTime | date:'shortTime'}}</td>
                     <td>{{data.totalDuration}}</td>
