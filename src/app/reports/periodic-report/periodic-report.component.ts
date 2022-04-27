@@ -18,30 +18,29 @@ export class PeriodicReportComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    $.fn.dataTable.ext.search.push(
-      function (settings, data, dataIndex) {
-        var dateFrom = parseInt($('#dateFrom').val(), 10);
-        var dateTo = parseInt($('#dateTo').val(), 10);
-        var searchDate = parseInt(data[4]) || 0; // use data for the age column
+    // $.fn.dataTable.ext.search.push(
+    //   function (settings, data, dataIndex) {
 
-        if ((isNaN(dateFrom) && isNaN(dateTo)) ||
-          (isNaN(dateFrom) && searchDate <= dateTo) ||
-          (dateFrom <= searchDate && isNaN(dateTo)) ||
-          (dateFrom <= searchDate && searchDate <= dateTo)) {
-          return true;
-        }
-        return false;
-      }
-    );
+      
+    //     var dateFrom = $('#dateFrom').val();
+    //     var dateTo = $('#dateTo').val();
+    //     // use data for the age column
+
+       
+    //     return false;
+    //   }
+    // );
     let table = $(this.dataTable.nativeElement).DataTable();
 
-    $('#dateFrom, #dateTo').keyup(function () {
-      table.draw();
+    $('#btnSearch').click(function () {
+       table.draw();
     });
   }
 
 
   ngOnInit(): void {
   }
+
+
 
 }
