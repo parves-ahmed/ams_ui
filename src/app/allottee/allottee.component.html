@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="card m-2">
+        <div class="card-header">
+            <h4 style="color: #677a87">Allottee List</h4>
+        </div>
+        <div class="card-body">
+          <table id="example" #dTable class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Allottee Name</th>
+                    <th>Location</th>
+                    <th>Phone No.</th>
+                    <th>Last Visited Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let allottee of allotteeList; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{allottee.allotteeName}}</td>
+                    <td>{{allottee.location}}</td>
+                    <td>{{allottee.phoneNo}}</td>
+                    <td>{{allottee.lastVisitedDate | date:'short'}}</td>
+                    <td>
+                      <button type="button" class="btn btn-info" id="editBtn">Edit</button>
+                      &nbsp;
+                      <button type="button" class="btn btn-danger" id="editBtn">Delete</button>
+                    </td>
+                </tr>        
+            </tbody>  
+          </table>
+        </div>
+    </div>
+  </div>  
+  

@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="card m-2">
+        <div class="card-header">
+            <h4 style="color: #677a87">Date Wise Attendance Report</h4>
+        </div>
+        <div class="card-body">
+          <table id="example" #dTable class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Allottee Name</th>
+                    <th>Location</th>
+                    <th>Phone No.</th>
+                    <th>Date</th>
+                    <th>In Time</th>
+                    <th>Out Time</th>
+                    <th>Total Duration At Rajuk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let data of dataList; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{data.allotteeName}}</td>
+                    <td>{{data.location}}</td>
+                    <td>{{data.phoneNo}}</td>
+                    <td>{{data.date | date:'dd-MM-yyyy'}}</td>
+                    <td>{{data.inTime | date:'shortTime'}}</td>
+                    <td>{{data.outTime | date:'shortTime'}}</td>
+                    <td>{{data.totalDuration}}</td>
+                </tr>        
+            </tbody>  
+          </table>
+        </div>
+    </div>
+  </div>  
+  
+

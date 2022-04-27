@@ -5,6 +5,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {UserPayload} from './user.payload';
 import {UserService} from '../shared/user.service';
 import {AuthService} from '../auth/shared/auth.service';
+import {Users} from './mock-users'
 
 declare const $:any;
 
@@ -15,6 +16,7 @@ declare const $:any;
 })
 export class UserComponent implements OnInit, AfterViewInit {
 
+  users = Users
   @ViewChild('dTable', {static: false}) dataTable: any;
 
   ngAfterViewInit(): void {

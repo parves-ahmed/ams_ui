@@ -25,6 +25,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {UserComponent} from './user/user.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { AddAllotteeComponent } from './add-allottee/add-allottee.component';
+import { AllotteeComponent } from './allottee/allottee.component';
+import { PeriodicReportComponent } from './reports/periodic-report/periodic-report.component';
+import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-report.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { AddAllotteeComponent } from './add-allottee/add-allottee.component';
     UserComponent,
     AddUserComponent,
     AddAllotteeComponent,
+    AllotteeComponent,
+    PeriodicReportComponent,
+    DateWiseReportComponent,
   ],
   imports: [
     BrowserModule,
