@@ -1,5 +1,6 @@
 .login-section{
   width: 100%;
+  padding: 200px;;
 }
 
 .login-failed{
@@ -33,7 +34,7 @@
   color: aliceblue;
 }
 
-.login {
+/* .login {
   background-color: #0079D3;
   border-color: #0079D3;
   color: aliceblue;
@@ -50,4 +51,30 @@
   text-transform: uppercase;
   padding: 3px 16px;
   opacity: 1;
+} */
+
+.login {
+	border-radius: 20px;
+	border: 1px solid #29b99e;
+	background-color: #29b99e;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 35px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.login:active {
+	transform: scale(0.95);
+}
+
+.login:focus {
+	outline: none;
+}
+
+.login.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
 }
