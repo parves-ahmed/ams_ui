@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     // if (this.authService.isLoggedIn()) {
-    //   this.router.navigate(['/application']).then(() => {
+    //   this.router.navigate(['/home']).then(() => {
     //     window.location.reload();
     //   });
     // }
@@ -53,6 +53,18 @@ export class LoginComponent implements OnInit {
     this.loginRequest.username = this.loginForm.get('username').value;
     this.loginRequest.password = this.loginForm.get('password').value;
     let user = this.users.find(n => n.username = this.loginRequest.username)
+    // console.log(this.loginRequest);
+    // this.authService.login(this.loginRequest).subscribe(() => {
+    //   this.isError = false;
+    //   console.log('Login Successful');
+    //   this.toaster.success('Login Successful');
+    //   this.router.navigateByUrl('/home').then(() => {
+    //     window.location.reload();
+    //   });
+    // }, () => {
+    //   this.isError = true;
+    //   console.log('Login Failed');
+    // });
     if(user.username == this.loginRequest.username.toString()){
       this.isError = false;
       console.log('Login Successful');

@@ -55,13 +55,13 @@ export class AuthService {
 
   // tslint:disable-next-line:typedef
   logout() {
-    this.httpClient.post('http://localhost:8080/api/auth/logout', this.refreshTokenPayload,
-      { responseType: 'text' })
-      .subscribe(data => {
-        console.log(data);
-      }, error => {
-        throwError(error);
-      });
+    // this.httpClient.post('http://localhost:8080/api/auth/logout', this.refreshTokenPayload,
+    //   { responseType: 'text' })
+    //   .subscribe(data => {
+    //     console.log(data);
+    //   }, error => {
+    //     throwError(error);
+    //   });
     this.localStorage.clear('authenticationToken');
     this.localStorage.clear('username');
     this.localStorage.clear('refreshToken');
