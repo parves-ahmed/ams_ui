@@ -77,7 +77,5 @@ export class LoginComponent implements OnInit {
     }
   }
 }
-
-// check branch from dev
  
 // this.authService.login(this.loginRequest).subscribe(() => 
