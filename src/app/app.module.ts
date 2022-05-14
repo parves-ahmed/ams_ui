@@ -29,6 +29,7 @@ import { AllotteeComponent } from './allottee/allottee.component';
 import { PeriodicReportComponent } from './reports/periodic-report/periodic-report.component';
 import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-report.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,7 @@ import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-re
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [
     {

@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {UserPayload} from '../user/user.payload';
+import { AddUserPayload } from '../add-user/add-user.payload';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,8 @@ export class UserService {
   }
 
   // get all user list from server
-  getAllUsers(): Observable<Array<UserPayload>> {
-    return this.httpClient.get<Array<UserPayload>>(this.serverUrl + 'api/user/user');
+  getAllUsers(): Observable<Array<AddUserPayload>> {
+    return this.httpClient.get<Array<AddUserPayload>>(this.serverUrl + 'api/users');
   }
 
   // get all employee list from server
@@ -28,8 +29,8 @@ export class UserService {
     return this.httpClient.get<Array<UserPayload>>(this.serverUrl + 'api/user/' + id);
   }
 
-  create(user: UserPayload): Observable<boolean> {
-    return this.httpClient.post<UserPayload>(this.serverUrl + 'api/user/', user)
+  create(user: AddUserPayload): Observable<boolean> {
+    return this.httpClient.post<AddUserPayload>(this.serverUrl + 'api/user/save', user)
       .pipe(map(data => {
         return true;
       }));
