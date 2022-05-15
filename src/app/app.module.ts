@@ -28,6 +28,7 @@ import { AddAllotteeComponent } from './add-allottee/add-allottee.component';
 import { AllotteeComponent } from './allottee/allottee.component';
 import { PeriodicReportComponent } from './reports/periodic-report/periodic-report.component';
 import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-report.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-re
     ToastrModule.forRoot(),
     FormsModule,
     NgbModule,
+    DataTablesModule
   ],
   providers: [
     {

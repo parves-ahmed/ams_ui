@@ -1,10 +1,13 @@
-import {AfterViewInit, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild, OnDestroy} from '@angular/core';
+import {ToastrService} from 'ngx-toastr';
+import {NgbModal, NgbModalConfig} from '@ng-bootstrap/ng-bootstrap';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {UserPayload} from './user.payload';
 import {UserService} from '../shared/user.service';
 import {AuthService} from '../auth/shared/auth.service';
 import {Users} from './mock-users'
-import {Router} from '@angular/router';
-import { AddUserPayload } from '../add-user/add-user.payload';
 import { Subject } from 'rxjs';
+import {AddUserPayload} from '../add-user/add-user.payload'
 
 declare const $:any;
 
@@ -13,43 +16,30 @@ declare const $:any;
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnDestroy, OnInit {
 
-  
+  dtOptions: DataTables.Settings = {};
   users: Array<AddUserPayload> = [];
-  dataTable: any;
-  dtOptions: any;
-
-  // dtTrigger: Subject<any> = new Subject<any>();
-  @ViewChild('dTable', {static: true}) table;
-
-  constructor(private userService: UserService, private authService: AuthService,
-     private router: Router){}
+  // @ViewChild('dTable', {static: false}) dataTable: any;
+  dtTrigger: Subject<any> = new Subject<any>();
 
   // ngAfterViewInit(): void {
-  //   $(this.dataTable.nativeElement).DataTable(); 
+  //   $(this.dataTable.nativeElement).DataTable();
   // }
 
+  constructor(private userService: UserService, private authService: AuthService){}
+
   ngOnInit(): void {
-    // this.dtOptions = {
-    //   pagingType: 'full_numbers',
-    //   pageLength: 2
-    // };
-    this.userService.getAllUsers().subscribe(users => {
-      this.users = users;
-      this.dtOptions = {
-        data: this.users,
-        columns: [
-          {title: 'User', data: 'username'},
-          // {title: 'Email', data: 'email'},
-          // {title: 'First Name', data: 'first_name'},
-          // {title: 'Last Name', data: 'last_name'},
-          // {title: 'Avatar', data: 'avatar'},
-        ]
-      };
-    }, err => {}, () => {
-      this.dataTable = $(this.table.nativeElement);
-      this.dataTable.DataTable(this.dtOptions);
+    this.userService.getAllUsers().subscribe(user => {
+      this.users = user;
+      console.log(this.users)
+      // Calling the DT trigger to manually render the table
+      this.dtTrigger.next();
     });
+  }
+
+  ngOnDestroy(): void {
+    // Do not forget to unsubscribe the event
+    this.dtTrigger.unsubscribe();
   }
 }
