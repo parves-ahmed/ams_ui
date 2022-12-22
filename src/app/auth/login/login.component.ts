@@ -38,17 +38,8 @@ export class LoginComponent implements OnInit {
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     });
-
-    // this.activatedRoute.queryParams
-    //   .subscribe(params => {
-    //     if (params.registered !== undefined && params.registered === 'true') {
-    //       this.toaster.success('Registration Successful');
-    //       this.registerSuccessMessage = 'You can login now using your username and password';
-    //     }
-    //   });
   }
 
-  // tslint:disable-next-line:typedef
   login() {
     this.loginRequest.username = this.loginForm.get('username').value;
     this.loginRequest.password = this.loginForm.get('password').value;
@@ -58,24 +49,11 @@ export class LoginComponent implements OnInit {
       this.isError = false;
       console.log('Login Successful');
       this.toaster.success('Login Successful');
-      this.router.navigateByUrl('/home').then(() => {
-        window.location.reload();
-      });
+      this.router.navigateByUrl('/home');
     }, () => {
       this.isError = true;
       console.log('Login Failed');
     });
-    // if(user.username == this.loginRequest.username.toString()){
-    //   this.isError = false;
-    //   console.log('Login Successful');
-    //   this.toaster.success('Login Successful');
-    //   this.router.navigate(['/home']);
-    // }
-    // else {
-    //   this.isError = true;
-    //   console.log('Login Failed');
-    // }
   }
 }
- 
-// this.authService.login(this.loginRequest).subscribe(() => 
+

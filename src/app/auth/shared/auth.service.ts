@@ -43,7 +43,7 @@ export class AuthService {
   refreshToken() {
     const refreshTokenPayload = {
       refreshToken: this.getRefreshToken(),
-      username: this.getUserName()
+      userName: this.getUserName()
     };
     return this.httpClient.post<LoginResponse>('http://localhost:8080/api/auth/refresh/token',
       refreshTokenPayload)

@@ -20,9 +20,15 @@ export class SidebarComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   logout() {
-    this.authService.logout();
-    this.router.navigateByUrl('/login').then(() => {
-      window.location.reload();
+    // this.authService.logout();
+    // this.router.navigateByUrl('/login').then(() => {
+    //   window.location.reload();
+    // });
+
+    this.authService.refreshToken().subscribe((loginResponse : any) => {
+      console.log(loginResponse);
+    }, () => {
+      console.log('Login Failed');
     });
   }
 

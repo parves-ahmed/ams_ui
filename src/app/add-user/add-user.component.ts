@@ -50,9 +50,7 @@ export class AddUserComponent implements OnInit {
     console.log(this.addUser);
     this.userService.create(this.addUser).subscribe(()=>{
       this.toastr.success('User Created Successfully');
-      this.router.navigateByUrl('/user').then(()=>{
-        window.location.reload();
-      })     
+      this.router.navigateByUrl('/user')     
     },() => {
       this.toastr.error('Error in User Creation')
     });
