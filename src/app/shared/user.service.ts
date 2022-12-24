@@ -28,7 +28,6 @@ export class UserService {
   getUser(id): Observable<Array<UserPayload>> {
     return this.httpClient.get<Array<UserPayload>>(this.serverUrl + 'api/user/' + id);
   }
-
   create(user: AddUserPayload): Observable<boolean> {
     return this.httpClient.post<AddUserPayload>(this.serverUrl + 'api/user/save', user)
       .pipe(map(data => {

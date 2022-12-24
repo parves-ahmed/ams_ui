@@ -11,7 +11,7 @@ export class SidebarComponent implements OnInit {
 
   isLoggedIn: boolean;
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(public authService: AuthService, private router: Router) {
   }
 
   ngOnInit(): void {

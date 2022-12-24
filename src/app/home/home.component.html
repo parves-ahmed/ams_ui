@@ -1,1 +1,5 @@
-<h1 class="home"> Welcome to RAJUK's <br> allottee attendence system </h1>
+<h1 class="home"> Welcome to Blog App  </h1>
+<div *ngIf="requestPanel"> Share your thinking with others 
+     <button class="btn btn-primary" type="submit" (click)="sendRequest()">Send Request</button> you are one step behind!    
+</div>
+<h4 *ngIf = "waitingPanel">Your request is sent for approval</h4>

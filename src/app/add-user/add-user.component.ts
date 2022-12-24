@@ -6,7 +6,8 @@ import { UserService } from '../shared/user.service';
 import { AddUserPayload } from './add-user.payload';
 import {ToastrService} from 'ngx-toastr';
 
-@Component({
+
+@Component({ 
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
   styleUrls: ['./add-user.component.css']

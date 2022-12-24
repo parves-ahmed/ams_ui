@@ -39,6 +39,24 @@ export class AuthService {
       }));
   }
 
+  public roleMatch(allowedRoles): boolean{
+    let isMatch = false;
+    const userRoles: any = this.getRole();
+    if(userRoles != null && userRoles){
+        for(let j= 0; allowedRoles.length; j++){
+          let userRole = userRoles.replace("[", "").replace("]", "")
+          if(userRole === allowedRoles[j]){
+            isMatch = true
+            return isMatch;
+          }
+          else{
+            return isMatch;
+          }
+        }
+      
+    }
+  }
+
   // tslint:disable-next-line:typedef
   refreshToken() {
     const refreshTokenPayload = {

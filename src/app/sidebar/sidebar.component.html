@@ -12,10 +12,13 @@
     </a>
     <div class="collapse" id="user">
       <div class="card card-body">
-        <a routerLink="/adduser" routerLinkActive="active" class="list-group-item">
+        <a routerLink="/adduser" routerLinkActive="active" class="list-group-item"
+        *ngIf="authService.roleMatch(['ROLE_SUPER_ADMIN'])"
+        >
           Add User
         </a>
-        <a routerLink="/user" routerLinkActive="active" class="list-group-item">
+        <a routerLink="/user" routerLinkActive="active" class="list-group-item"
+        *ngIf="authService.roleMatch(['ROLE_USER'])">
           User List
         </a>
       </div>

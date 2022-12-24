@@ -29,6 +29,7 @@ import { AllotteeComponent } from './allottee/allottee.component';
 import { PeriodicReportComponent } from './reports/periodic-report/periodic-report.component';
 import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-report.component';
 import { DataTablesModule } from 'angular-datatables';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { DataTablesModule } from 'angular-datatables';
     AllotteeComponent,
     PeriodicReportComponent,
     DateWiseReportComponent,
+    ForbiddenComponent,
   ],
   imports: [
     BrowserModule,

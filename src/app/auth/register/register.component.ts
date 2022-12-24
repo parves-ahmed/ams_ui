@@ -25,8 +25,8 @@ export class RegisterComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-    if (this.authService.isLoggedIn()) {
-      this.router.navigate(['/application']);
+    if (this.authService.isLoggedIn()) { 
+      this.router.navigate(['/home']);
     }
     this.registerForm = new FormGroup({
       username: new FormControl('', Validators.required),

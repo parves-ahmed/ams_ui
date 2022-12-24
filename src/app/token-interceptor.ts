@@ -66,8 +66,7 @@ export class TokenInterceptor implements HttpInterceptor {
   // tslint:disable-next-line:typedef
   addToken(req: HttpRequest<any>, jwtToken: any) {
     return req.clone({
-      headers: req.headers.set('Authorization',
-        'Bearer ' + jwtToken)
+      headers: req.headers.set('Authorization','Bearer ' + jwtToken)
     });
   }
 

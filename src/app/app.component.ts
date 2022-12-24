@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
+import { AuthService } from './auth/shared/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,15 @@ import { NavigationStart, Router } from '@angular/router';
 export class AppComponent {
   title = 'ams-ui';
   showHead: boolean = false;
-  constructor(private router: Router){
+  constructor(private router: Router, private authService: AuthService){
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-        if (event['url'] == '/login') {
+        const loggedIn = this.authService.isLoggedIn();
+        if (!loggedIn) {
           this.showHead = false;
         } else {
           // console.log("NU")
-          this.showHead = true;
+          this.showHead = true;  
         }
       }
     });

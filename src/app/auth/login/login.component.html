@@ -10,8 +10,7 @@
             <div class="form-group row">
               <label for="user_name" class="col-md-4 col-form-label text-md-right">Username</label>
               <div class="col-md-6">
-                <input type="text" id="user_name" class="form-control" formControlName="username" name="user_name"
-                       required autofocus>
+                <input type="text" id="user_name" class="form-control" formControlName="username" name="user_name">
                 <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">
                   Please provide a valid username
                 </span>
@@ -34,6 +33,7 @@
                 Login
               </button>
             </span>
+            <p class="text-center">Don't have an account? <a routerLink="/register">Register </a></p>
             <div class="login-failed" *ngIf='this.isError'>
               <p class="login-failed-text">Login Failed. Please check your credentials and try again.</p>
             </div>
