@@ -16,7 +16,6 @@ export class AuthGuard implements CanActivate {
     const isAuthenticated = this.authService.isLoggedIn();
     if (isAuthenticated) {
       const role = next.data["role"] as Array<string>;
-      console.log(role)
       if(role){
         const match = this.authService.roleMatch(role);
         if(match){

@@ -1,10 +1,6 @@
 export interface AddUserPayload{
-    id: number;
+    uuid: string;
     username:string;
-    departmentName:string;
-    designation:string;
     email:string;
-    phoneNo: string;
-    userId: number;
     password:string
 }

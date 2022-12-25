@@ -15,7 +15,8 @@ export class HomeComponent implements OnInit {
   requestAuthorityPayload: RequestAuthorityPayload; 
   requestPanel: boolean = true;
   waitingPanel: boolean = false;
-  constructor(private router: Router, private homeService: HomeServiceService, private toastr: ToastrService) {
+  constructor(private router: Router, private homeService: HomeServiceService, private toastr: ToastrService,
+    public authService: AuthService) {
     this.requestAuthorityPayload = {
       requestStatus: ''
     }

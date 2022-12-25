@@ -13,18 +13,25 @@
     <div class="collapse" id="user">
       <div class="card card-body">
         <a routerLink="/adduser" routerLinkActive="active" class="list-group-item"
-        *ngIf="authService.roleMatch(['ROLE_SUPER_ADMIN'])"
-        >
-          Add User
+        *ngIf="authService.roleMatch(['ROLE_SUPER_ADMIN'])">
+        Add User
+        </a>
+        <a routerLink="/userrequest" routerLinkActive="active" class="list-group-item"
+        *ngIf="authService.roleMatch(['ROLE_SUPER_ADMIN'])">
+        User Request
         </a>
         <a routerLink="/user" routerLinkActive="active" class="list-group-item"
-        *ngIf="authService.roleMatch(['ROLE_USER'])">
+        *ngIf="authService.roleMatch(['ROLE_SUPER_ADMIN'])">
           User List
+        </a>
+        <a routerLink="/addallottee" routerLinkActive="active" class="list-group-item"
+        *ngIf="authService.roleMatch(['ROLE_USER'])">
+          Addd Allotte
         </a>
       </div>
     </div>
 
-    <a class="list-group-item" data-toggle="collapse" href="#allottee" role="button" aria-expanded="false"
+    <!-- <a class="list-group-item" data-toggle="collapse" href="#allottee" role="button" aria-expanded="false"
       aria-controls="collapseExample">
       <span><i class="fa fa-edit"></i></span> ALLOTTEE
     </a>
@@ -37,9 +44,9 @@
           Allottee List
         </a>
       </div>
-    </div>
+    </div> -->
 
-    <a class="list-group-item" data-toggle="collapse" href="#report" role="button" aria-expanded="false"
+    <!-- <a class="list-group-item" data-toggle="collapse" href="#report" role="button" aria-expanded="false"
       aria-controls="collapseExample">
       <span><i class="fa fa-book"></i></span> REPORTS
     </a>
@@ -52,7 +59,7 @@
           Periodic Attendence Report
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 <!-- /#sidebar-wrapper -->

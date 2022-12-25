@@ -7,7 +7,8 @@ import {UserService} from '../shared/user.service';
 import {AuthService} from '../auth/shared/auth.service';
 import {Users} from './mock-users'
 import { Subject } from 'rxjs';
-import {AddUserPayload} from '../add-user/add-user.payload'
+import {AddUserPayload} from '../add-user/add-user.payload';
+import { Router } from '@angular/router';
 
 declare const $:any;
 
@@ -20,6 +21,7 @@ export class UserComponent implements OnDestroy, OnInit {
 
   dtOptions: DataTables.Settings = {};
   users: Array<AddUserPayload> = [];
+  user: AddUserPayload;
   // @ViewChild('dTable', {static: false}) dataTable: any;
   dtTrigger: Subject<any> = new Subject<any>();
 
@@ -27,7 +29,8 @@ export class UserComponent implements OnDestroy, OnInit {
   //   $(this.dataTable.nativeElement).DataTable();
   // }
 
-  constructor(private userService: UserService, private authService: AuthService){}
+  constructor(private userService: UserService, private authService: AuthService, private toastr: ToastrService,
+     private router: Router){}
 
   ngOnInit(): void {
     this.userService.getAllUsers().subscribe(user => {
@@ -36,6 +39,10 @@ export class UserComponent implements OnDestroy, OnInit {
       // Calling the DT trigger to manually render the table
       this.dtTrigger.next();
     });
+  }
+
+  updateUser(id){
+    this.router.navigateByUrl("/user/" + id)
   }
 
   ngOnDestroy(): void {

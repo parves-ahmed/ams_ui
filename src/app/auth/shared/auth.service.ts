@@ -21,10 +21,14 @@ export class AuthService {
   };
 
   serverUrl: string;
+  responseMessage: string;
 
   register(registerRequestPayload: RegisterRequestPayload): Observable<any> {
-    return this.httpClient.post(this.serverUrl + 'api/auth/register', registerRequestPayload,
-      {responseType: 'text'});
+    return this.httpClient.post(this.serverUrl + 'api/auth/register', registerRequestPayload).pipe(map(data => {
+        console.log('ret: ' + data["message"]);
+         this.responseMessage =  data["message"]
+         return true;
+       }));;
   }
 
   login(loginRequest: LoginRequest): Observable<boolean> {
@@ -41,11 +45,11 @@ export class AuthService {
 
   public roleMatch(allowedRoles): boolean{
     let isMatch = false;
-    const userRoles: any = this.getRole();
+    const userRoles: any  = this.getRole().replace("[","").replace("]", "").split(",");
     if(userRoles != null && userRoles){
+      for(let i= 0; userRoles.length; i++){
         for(let j= 0; allowedRoles.length; j++){
-          let userRole = userRoles.replace("[", "").replace("]", "")
-          if(userRole === allowedRoles[j]){
+          if(userRoles[i] === allowedRoles[j]){
             isMatch = true
             return isMatch;
           }
@@ -53,7 +57,7 @@ export class AuthService {
             return isMatch;
           }
         }
-      
+      }    
     }
   }
 

@@ -12,15 +12,18 @@ import { AllotteeComponent } from './allottee/allottee.component';
 import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-report.component';
 import { PeriodicReportComponent } from './reports/periodic-report/periodic-report.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { UserRequestComponent } from './user-request/user-request.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, canActivate: [AuthGuard]},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'user', component: UserComponent, canActivate:[AuthGuard], data:{role:['ROLE_USER']}},
+  {path: 'user', component: UserComponent, canActivate:[AuthGuard], data:{role:['ROLE_SUPER_ADMIN']}},
   {path: 'adduser', component: AddUserComponent, canActivate:[AuthGuard], data:{role:['ROLE_SUPER_ADMIN']}},
-  {path: 'addallottee', component: AddAllotteeComponent},
+  {path: 'user/:id', component: AddUserComponent, canActivate:[AuthGuard], data:{role:['ROLE_SUPER_ADMIN']}},
+  {path: 'userrequest', component: UserRequestComponent, canActivate:[AuthGuard], data:{role:['ROLE_SUPER_ADMIN']}},
+  {path: 'addallottee', component: AddAllotteeComponent, canActivate:[AuthGuard], data:{role:['ROLE_USER']}},
   {path: 'allottee', component: AllotteeComponent},
   {path: 'attendancereport', component: DateWiseReportComponent},
   {path: 'periodicreport', component: PeriodicReportComponent},

@@ -10,12 +10,15 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   isLoggedIn: boolean;
+  username: string;
 
   constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit(): void {
     this.isLoggedIn = this.authService.isLoggedIn();
+    this.username = this.authService.getUserName();
+
   }
 
   // tslint:disable-next-line:typedef

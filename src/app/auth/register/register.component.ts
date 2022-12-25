@@ -42,8 +42,17 @@ export class RegisterComponent implements OnInit {
     this.registerRequestPayload.password = this.registerForm.get('password').value;
 
     this.authService.register(this.registerRequestPayload).subscribe(() => {
-      console.log('Registration Successful');
-      this.router.navigate(['/login'], {queryParams: {registered: 'true'}});
+      if(this.authService.responseMessage === "user already exists"){
+        this.toastr.info(this.authService.responseMessage);
+      }
+      else if(this.authService.responseMessage ==='Registration Successful'){
+        this.toastr.info(this.authService.responseMessage);
+        this.router.navigate(['/login'], {queryParams: {registered: 'true'}});
+      }
+      else{
+        this.toastr.info(this.authService.responseMessage);
+      }
+    
     }, () => {
       console.log('Registration Failed');
       this.toastr.error('Registration Failed! Please try again');

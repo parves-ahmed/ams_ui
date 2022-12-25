@@ -30,6 +30,7 @@ import { PeriodicReportComponent } from './reports/periodic-report/periodic-repo
 import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-report.component';
 import { DataTablesModule } from 'angular-datatables';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { UserRequestComponent } from './user-request/user-request.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     PeriodicReportComponent,
     DateWiseReportComponent,
     ForbiddenComponent,
+    UserRequestComponent,
   ],
   imports: [
     BrowserModule,
