@@ -13,6 +13,7 @@ import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-re
 import { PeriodicReportComponent } from './reports/periodic-report/periodic-report.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { UserRequestComponent } from './user-request/user-request.component';
+import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, canActivate: [AuthGuard]},
@@ -23,7 +24,7 @@ const routes: Routes = [
   {path: 'adduser', component: AddUserComponent, canActivate:[AuthGuard], data:{role:['ROLE_SUPER_ADMIN']}},
   {path: 'user/:id', component: AddUserComponent, canActivate:[AuthGuard], data:{role:['ROLE_SUPER_ADMIN']}},
   {path: 'userrequest', component: UserRequestComponent, canActivate:[AuthGuard], data:{role:['ROLE_SUPER_ADMIN']}},
-  {path: 'addallottee', component: AddAllotteeComponent, canActivate:[AuthGuard], data:{role:['ROLE_USER']}},
+  {path: 'blog', component: BlogComponent, canActivate:[AuthGuard], data:{role:['ROLE_BLOGGER']}},
   {path: 'allottee', component: AllotteeComponent},
   {path: 'attendancereport', component: DateWiseReportComponent},
   {path: 'periodicreport', component: PeriodicReportComponent},

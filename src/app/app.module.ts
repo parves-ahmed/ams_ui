@@ -31,6 +31,7 @@ import { DateWiseReportComponent } from './reports/date-wise-report/date-wise-re
 import { DataTablesModule } from 'angular-datatables';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { UserRequestComponent } from './user-request/user-request.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { UserRequestComponent } from './user-request/user-request.component';
     DateWiseReportComponent,
     ForbiddenComponent,
     UserRequestComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

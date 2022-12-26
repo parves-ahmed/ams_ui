@@ -7,7 +7,7 @@
   </div>
   <div class="list-group list-group-flush">
     <a class="list-group-item" data-toggle="collapse" href="#user" role="button" aria-expanded="false"
-      aria-controls="collapseExample">
+      aria-controls="collapseExample" *ngIf="authService.roleMatch(['ROLE_SUPER_ADMIN'])">
       <span><i class="fa fa-user"></i></span> USER
     </a>
     <div class="collapse" id="user">
@@ -24,27 +24,21 @@
         *ngIf="authService.roleMatch(['ROLE_SUPER_ADMIN'])">
           User List
         </a>
-        <a routerLink="/addallottee" routerLinkActive="active" class="list-group-item"
-        *ngIf="authService.roleMatch(['ROLE_USER'])">
-          Addd Allotte
-        </a>
       </div>
     </div>
 
-    <!-- <a class="list-group-item" data-toggle="collapse" href="#allottee" role="button" aria-expanded="false"
-      aria-controls="collapseExample">
-      <span><i class="fa fa-edit"></i></span> ALLOTTEE
+    <a class="list-group-item" data-toggle="collapse" href="#blog" role="button" aria-expanded="false"
+      aria-controls="collapseExample" *ngIf="authService.roleMatch(['ROLE_BLOGGER'])">
+      <span><i class="fa fa-edit"></i></span> Blog
     </a>
-    <div class="collapse" id="allottee">
+    <div class="collapse" id="blog">
       <div class="card card-body">
-        <a routerLink="/addallottee" routerLinkActive="active" class="list-group-item">
-          Allottee Entry
-        </a>
-        <a routerLink="/allottee" routerLinkActive="active" class="list-group-item">
-          Allottee List
+        <a routerLink="/blog" routerLinkActive="active" class="list-group-item"
+        *ngIf="authService.roleMatch(['ROLE_BLOGGER'])">
+          Blog
         </a>
       </div>
-    </div> -->
+    </div>
 
     <!-- <a class="list-group-item" data-toggle="collapse" href="#report" role="button" aria-expanded="false"
       aria-controls="collapseExample">
